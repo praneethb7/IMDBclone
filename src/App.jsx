@@ -1,8 +1,24 @@
 import React from "react";
+import Navbar from "./Components/Navbar";
+import MovieRecommendations from "./Components/MovieRecommendations";
+import Movies from "./Components/Movies";
+import WatchList from "./Components/WatchList";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App(){
+function App() {
   return (
-    <h1>Movies</h1>
+    <>
+      <BrowserRouter>
+        <Navbar />
+
+        <Routes>
+          <Route path='/mv' element={<Movies />} />
+          <Route path='/wL' element={<WatchList />} />
+          <Route path='/recc' element={<MovieRecommendations />} />
+        </Routes>
+
+      </BrowserRouter>
+    </>
   )
 }
 export default App;
