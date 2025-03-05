@@ -1,14 +1,18 @@
 import React from "react";
-function Banner() {
+function Banner({movies}) {
+  const randomMovie = movies[Math.floor(Math.random() * movies.length)];
   return (
     <>
       <div
-        className="h-[70vh] w-[100vw] bg-cover mb-0"
+        className="h-[20vh] md:h-[75vh] bg-cover bg-center flex items-end justify-center"
         style={{
-          backgroundImage:
-            "url(https://i.pinimg.com/originals/29/7d/e0/297de0761b0c756266d74ca50d03cc1d.jpg)",
+          backgroundImage: `url(https://image.tmdb.org/t/p/original/${randomMovie.backdrop_path})`,
         }}
-      ></div>
+      >
+        <div className="text-[#CCC9DC] text-2xl mb-[30px] bg-[#121212] p-2 transition duration-500 rounded inline-block">
+          {randomMovie.title}
+        </div>
+      </div>
     </>
   );
 }
