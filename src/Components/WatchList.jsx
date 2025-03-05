@@ -2,7 +2,7 @@ import React from "react";
 
 function WatchList(){
     return(
-        <div>EatchList</div>
+        <div className="h-[100vh] bg-[#121212]">EatchList</div>
     )
 }
 

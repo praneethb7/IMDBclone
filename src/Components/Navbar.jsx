@@ -12,9 +12,9 @@ function Navbar() {
 
 
       <div className="flex space-x-6">
-        <Link to="/mv" className="text-sky-100 bg-transparent hover:bg-blue-900 p-2 transition duration-500 rounded">Movies</Link>
-        <Link to="/wL" className="text-sky-100 bg-transparent hover:bg-blue-900 p-2 transition duration-500 rounded">Watch List</Link>
-        <Link to="/recc" className="text-sky-100 hbg-transparent hover:bg-blue-900 p-2 transition duration-500 rounded">Movie Recommendations AI</Link>
+        <Link to="/mv" className="text-[#CCC9DC] bg-transparent hover:bg-blue-900 p-2 transition duration-500 rounded">Movies</Link>
+        <Link to="/wL" className="text-[#CCC9DC] bg-transparent hover:bg-blue-900 p-2 transition duration-500 rounded">Watch List</Link>
+        <Link to="/recc" className="text-[#CCC9DC] hbg-transparent hover:bg-blue-900 p-2 transition duration-500 rounded">Movie Recommendations AI</Link>
       </div>
     </nav>
   );
