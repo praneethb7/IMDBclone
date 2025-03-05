@@ -19,7 +19,7 @@ function Movies() {
         });
     },[])
     return (
-        <main className="bg-[#121212]">
+        <main className="bg-[#121212] mt-[-20px]">
            <div className="text-2xl font-bold text-center m-5 text-[#CCC9DC]">
             <h1>Trending Movies</h1>
            </div>
