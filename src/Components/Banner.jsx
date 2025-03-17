@@ -9,7 +9,7 @@ function Banner({movies}) {
           backgroundImage: `url(https://image.tmdb.org/t/p/original/${randomMovie.backdrop_path})`,
         }}
       >
-        <div className="text-[#CCC9DC] text-2xl mb-[30px] bg-[#121212] p-2 transition duration-500 rounded inline-block">
+        <div className="text-[#CCC9DC] text-2xl mb-[30px] bg-gray-900/70 p-2 transition duration-500 rounded inline-block">
           {randomMovie.title}
         </div>
       </div>
