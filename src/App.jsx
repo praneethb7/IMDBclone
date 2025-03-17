@@ -13,6 +13,7 @@ function App() {
   const [movies, setMovies] = useState(null);
   const [loading, setLoading] = useState(true);
   const[page,setPage] = useState(1);
+  const [watchList , setWatchList] = useState([])
 
   function pageNext(){
     setPage(page=>page+1)
@@ -22,6 +23,12 @@ function App() {
       setPage(page=>page-1)
     }
   }
+
+  function handleAddToWatchList(movieObj){
+    const updatedWatchlist = [...watchList , movieObj]
+    setWatchList(updatedWatchlist)
+    console.log(updatedWatchlist)
+  }  
 
   useEffect(() => {
     axios.get(
@@ -45,7 +52,7 @@ function App() {
           <Route path='/mv' element={
             <>
               {(loading == true) ? <h1>Loading...</h1> : <Banner movies={movies} />}
-              <Movies movies={movies} loading={loading} />
+              <Movies movies={movies} loading={loading} handleAddToWatchList={handleAddToWatchList} watchList={watchList}/>
               <Pagination pageNext={pageNext} pagePrev={pagePrev} page={page}/>
             </>
           } />
